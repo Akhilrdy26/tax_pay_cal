@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pay Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: auto;
+        }
+        input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Pay Calculator</h2>
+        <form action="/calculate" method="post">
+            <label for="hours">Enter Hours Worked:</label>
+            <input type="number" step="0.01" name="hours" required><br>
+            
+            <label for="pay">Enter Pay per Hour:</label>
+            <input type="number" step="0.01" name="pay" required><br>
+            
+            <input type="submit" value="Calculate">
+        </form>
+    </div>
+</body>
+</html>
